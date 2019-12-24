@@ -1,0 +1,15 @@
+<h3 style="text-align: center;">You're in {{title}} page</h3>
+
+<table *ngIf="brews">
+    <tr>
+        <th colspan="3">Breweries</th>
+    </tr>
+    <tr>
+        <th>Sl.No.</th>
+        <th>Company Name</th>
+    </tr>
+    <tr *ngFor="let brew of brews; let i = index">
+        <td>{{i+1}}.</td>
+        <td><a href="#" routerLink="/details/{{brew.id}}"  title="View More">{{brew.name}}</a></td>
+    </tr>
+</table>
