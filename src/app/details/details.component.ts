@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ActivatedRoute } from '@angular/router';
+import { HttpService } from '../http.service';
+//import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-details',
@@ -12,13 +13,19 @@ export class DetailsComponent implements OnInit {
 
   title = "Brewerage Details";
 
-  id: Object;
+  beer: Object;
 
-  constructor( private route: ActivatedRoute ) { }
+  constructor( private route: ActivatedRoute, private data:HttpService ) { 
+    this.route.params.subscribe( params => this.beer = params.id );
+   }
 
   ngOnInit() {
 
     this.loadDetails();
+
+    this.data.getBeerDetails(this.beer).subscribe(
+      data => this.beer = data 
+    );
 
   }
 

@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
 
       this.brews = data;
 
-      //console.log(this.brews);
+      console.log(this.brews);
 
     } );
 

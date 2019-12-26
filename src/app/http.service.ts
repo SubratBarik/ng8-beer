@@ -15,4 +15,8 @@ export class HttpService {
     return this.http.get('https://api.openbrewerydb.org/breweries'); //free api of brewarages
   }
 
+  getBeerDetails(beerID) {
+    return this.http.get('https://api.openbrewerydb.org/breweries/'+beerID);
+  }
+
 }
