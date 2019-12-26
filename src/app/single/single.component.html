@@ -5,7 +5,5 @@
     <div class="single-image">
         <img src="">
     </div>
-    <div class="single-desc">
-        {{blog.excerpt.rendered}}
-    </div>
+    <div class="single-desc" [innerHTML]=blog.content.rendered></div>
 </div>
