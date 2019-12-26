@@ -1,24 +1,9 @@
-<h3>Welcome to {{title}} page</h3>
+<h3 style="text-align: center;">Welcome to {{title}} page</h3>
 
-<div class="play-container">
-    <p>You've clicked <a href="javascript:void(0)" (click)="countClick()" style="font-weight: bold;">this</a> {{clickCounter}} times.</p>
-</div>
+<h5 style="text-align: center;">Bitrump Posts</h5>
 
-<div class="play-container">
-    <p>
-        <label>Your Name<br>
-            <input type="text" [(ngModel)]="name">
-        </label>
-    </p>
-    <p><span>{{name}}</span></p>
-</div>
-
-<div class="play-container">
-    <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
-        <p>Counter is <strong style="background:red; padding: 5px; color: white;">GREATER</strong> than 4</p>
-    </ng-template>
-
-    <ng-template #none>
-        <p>Counter is <strong style="background:green; padding: 5px; color: white;">LESS</strong> than 4</p>
-    </ng-template>
+<div class="posts" *ngIf="posts">
+    <ul *ngFor="let post of posts">
+        <li id="{{post.id}}"><a routerLink="/single/{{post.id}}">{{post.title.rendered}}</a></li>
+    </ul>
 </div>

@@ -31,7 +31,7 @@ export class DetailsComponent implements OnInit {
 
   loadDetails(){
     const id = +this.route.snapshot.paramMap.get('id');
-    console.log(id);
+    //console.log(id);
     //console.log(typeof(id));
   }
 

@@ -19,4 +19,13 @@ export class HttpService {
     return this.http.get('https://api.openbrewerydb.org/breweries/'+beerID);
   }
 
+  getPosts(){
+    return this.http.get('https://www.bitrump.com/news/wp-json/wp/v2/posts'); //Bitrump Rest API
+  }
+
+  getPostDetails(postID){
+    return this.http.get('https://www.bitrump.com/news/wp-json/wp/v2/posts/'+postID);
+  }
+  
+
 }
