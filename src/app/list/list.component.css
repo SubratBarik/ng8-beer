@@ -29,6 +29,6 @@ td a {
     font-weight: 400;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
     background-color: #dfdfdf;
-}
+} */

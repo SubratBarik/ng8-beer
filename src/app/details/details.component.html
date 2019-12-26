@@ -1,12 +1,25 @@
 <h3  style="text-align: center;">{{title}}</h3>
 
-<h5>{{beer.name}}</h5>
+<table>
+    <tr>
+        <th colspan="3">{{beer.name}}</th>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td>{{beer.phone}}</td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>{{beer.street}}, {{beer.city}}, {{beer.postal_code}}, {{beer.state}}</td>
+    </tr>
+    <tr>
+        <th>Country</th>
+        <td>{{beer.country}}</td>
+    </tr>
+    <tr>
+        <th>Website</th>
+        <td><a href="{{beer.website_url}}" target="_blank">{{beer.website_url}}</a></td>
+    </tr>
+</table>
 
-<ul>
-    <li><strong>Name:</strong> {{ beer.name }}</li>
-    <li><strong>Street:</strong> {{ beer.street }}</li>
-    <li><strong>City:</strong> {{ beer.city }}</li>
-    <li><strong>Country:</strong> {{ beer.country }}</li>
-    <li><strong>Phone:</strong> {{ beer.phone }}</li>
-    <li><strong>Website:</strong> {{ beer.website_url }}</li>
-</ul>
+<div class="back-btn"><a routerLink="/list">Back</a></div>

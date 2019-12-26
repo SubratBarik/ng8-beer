@@ -1,7 +1,8 @@
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
 }
 
 td, th {
@@ -22,6 +23,9 @@ td a {
     font-weight: bolder;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
     background-color: #dfdfdf;
-}
+} */
+
+.back-btn { width: 100px; text-align: center; background: rebeccapurple; padding: 5px 10px; margin: 25px auto; display: block; }
+.back-btn a { color: white; }
